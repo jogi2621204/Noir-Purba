@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noir Primadona Purba, PhD &mdash; Associate Professor of Physical Oceanography</title>
+<meta name="description" content="Associate Professor at Universitas Padjadjaran. Physical oceanographer, ocean technology innovator, and marine debris researcher.">
+<meta property="og:title" content="Noir Primadona Purba, PhD">
+<meta property="og:description" content="Physical oceanographer, ocean technology innovator, and marine debris researcher at Universitas Padjadjaran.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:#000}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:#000;color:#fff;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;font-weight:500;line-height:1.5;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+::selection{background:rgba(255,255,255,0.2);color:#fff}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#000}
+::-webkit-scrollbar-thumb{background:#3b3d45;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#fff}
+
+:root{
+  --canvas:#000;
+  --s1:#15181e;
+  --s2:#1f232b;
+  --s3:#3b3d45;
+  --hairline:#3b3d45;
+  --hairline-s:#252830;
+  --ink:#fff;
+  --muted:#b2b6bd;
+  --subtle:#656a76;
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+section{padding:96px 32px}
+.bg-black{background:#000}
+.bg-s1{background:var(--s1)}
+
+/* ── Nav ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#000;border-bottom:1px solid var(--hairline-s);
+  height:56px;display:flex;align-items:center;
+}
+.nav-in{max-width:1120px;margin:0 auto;padding:0 32px;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px}
+.nav-links{display:flex;align-items:center;gap:0}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);padding:6px 14px;border-radius:6px;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-cta{
+  margin-left:12px;
+  background:#fff;color:#000;
+  font-size:14px;font-weight:600;
+  padding:8px 18px;border-radius:8px;
+  transition:opacity .15s;
+}
+.nav-cta:hover{opacity:.85}
+.mob-btn{display:none;background:none;border:1px solid var(--hairline);cursor:pointer;color:var(--muted);padding:7px 9px;border-radius:6px}
+.mob-btn:hover{color:#fff;border-color:#fff}
+.mob-btn svg{display:block}
+.mob-btn .ic-close{display:none}
+.mob-btn.open .ic-menu{display:none}
+.mob-btn.open .ic-close{display:block}
+.mob-menu{
+  display:none;position:fixed;top:56px;left:0;right:0;z-index:99;
+  background:#000;border-bottom:1px solid var(--hairline-s);
+  padding:8px 16px 16px;flex-direction:column;gap:2px;
+}
+.mob-menu a{font-size:14px;color:var(--muted);padding:10px 14px;border-radius:6px;display:block;transition:color .15s}
+.mob-menu a:hover{color:#fff}
+.mob-menu.open{display:flex}
+
+/* ── Buttons ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  padding:10px 18px;border-radius:8px;cursor:pointer;border:none;
+  transition:opacity .15s;
+}
+.btn-w{background:#fff;color:#000}
+.btn-w:hover{opacity:.85}
+.btn-d{background:var(--s2);color:#fff;border:1px solid var(--hairline)}
+.btn-d:hover{background:var(--s3);color:#fff}
+.btn-sm{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:inherit;font-size:13px;font-weight:600;
+  padding:7px 14px;border-radius:6px;cursor:pointer;border:none;
+  background:#fff;color:#000;transition:opacity .15s;
+}
+.btn-sm:hover{opacity:.85}
+
+/* ── Eyebrow ── */
+.eyebrow{
+  display:block;font-size:12px;font-weight:600;
+  letter-spacing:0.6px;text-transform:uppercase;color:var(--muted);
+  margin-bottom:16px;
+}
+
+/* ── Section titles ── */
+.s-title{font-size:clamp(28px,4vw,40px);font-weight:700;color:#fff;letter-spacing:-1.0px;margin-bottom:10px;line-height:1.19}
+.s-sub{font-size:16px;font-weight:500;color:var(--muted);max-width:600px;line-height:1.7}
+
+/* ── Cards ── */
+.card{background:var(--s1);border:1px solid var(--hairline);border-radius:12px;padding:24px}
+.card-s2{background:var(--s2);border:1px solid var(--hairline);border-radius:12px;padding:24px}
+
+/* ── Tag / chip ── */
+.tag{
+  display:inline-flex;align-items:center;
+  background:var(--s2);border:1px solid var(--hairline);
+  color:var(--muted);font-size:12px;font-weight:600;
+  padding:3px 10px;border-radius:4px;letter-spacing:0.2px;
+}
+
+/* ── Reveal ── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ── Hero ── */
+#hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:80px 32px 80px;background:#000;position:relative;overflow:hidden;
+}
+.hero-grid{
+  max-width:1120px;width:100%;display:grid;
+  grid-template-columns:auto 1fr;gap:80px;align-items:center;
+}
+.hero-photo-ring{
+  width:200px;height:200px;flex-shrink:0;border-radius:50%;
+  border:1px solid var(--hairline);overflow:hidden;
+}
+.hero-photo-ring img{width:100%;height:100%;object-fit:cover}
+.hero-label{font-size:12px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:block}
+.hero-name{font-size:clamp(44px,6vw,72px);font-weight:700;letter-spacing:-2px;line-height:1.08;color:#fff;margin-bottom:14px}
+.hero-dept{font-size:16px;font-weight:500;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.hero-quote{
+  border-left:2px solid var(--s3);padding-left:20px;
+  margin-bottom:32px;max-width:520px;
+}
+.hero-quote p{font-size:16px;color:var(--muted);font-style:italic;line-height:1.7}
+.hero-quote cite{display:block;margin-top:6px;font-size:12px;color:var(--subtle);font-style:normal;font-weight:600;letter-spacing:0.4px;text-transform:uppercase}
+.hero-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.stat{background:var(--s1);border:1px solid var(--hairline);border-radius:8px;padding:12px 20px;text-align:center;min-width:96px}
+.stat-v{font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;font-variant-numeric:tabular-nums}
+.stat-l{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;color:var(--subtle);margin-top:2px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.hero-rule{
+  position:absolute;bottom:0;left:0;right:0;
+  height:1px;background:var(--hairline-s);
+}
+
+/* ── About ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.edu-list{display:flex;flex-direction:column;gap:10px}
+.edu{background:var(--s1);border:1px solid var(--hairline);border-radius:8px;padding:16px 18px}
+.edu-deg{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:3px}
+.edu-inst{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:3px}
+.edu-yr{font-size:12px;font-weight:600;color:var(--subtle);letter-spacing:0.2px}
+
+/* ── Research ── */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(256px,1fr));gap:16px}
+.rc{background:var(--s1);border:1px solid var(--hairline);border-radius:12px;padding:28px}
+.rc-num{font-size:11px;font-weight:700;color:var(--subtle);letter-spacing:0.8px;text-transform:uppercase;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.rc-t{font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.4px;margin-bottom:10px;line-height:1.25}
+.rc-d{font-size:14px;font-weight:500;color:var(--muted);line-height:1.7}
+
+/* ── Innovations ── */
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ic{background:var(--s1);border:1px solid var(--hairline);border-radius:12px;padding:28px}
+.ic.feat{grid-column:1/-1;background:var(--s2);display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.i-name{font-size:26px;font-weight:700;color:#fff;letter-spacing:-0.8px;margin-bottom:4px}
+.i-full{font-size:13px;font-weight:500;color:var(--subtle);margin-bottom:14px}
+.i-st{display:inline-block;font-size:11px;font-weight:600;color:var(--muted);border:1px solid var(--hairline);padding:3px 9px;border-radius:4px;letter-spacing:0.4px;margin-bottom:14px;text-transform:uppercase}
+.i-desc{font-size:14px;font-weight:500;color:var(--muted);line-height:1.75;margin-bottom:16px}
+.i-awards{list-style:none}
+.i-awards li{font-size:13px;font-weight:500;color:var(--muted);padding:8px 0;border-top:1px solid var(--hairline-s);display:flex;align-items:flex-start;gap:10px}
+.i-awards li::before{content:'';display:block;width:3px;height:3px;border-radius:50%;background:var(--muted);margin-top:8px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+
+/* ── Publications ── */
+.pl{display:flex;flex-direction:column;gap:10px}
+.pi{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
+.pi-title{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:5px;line-height:1.45}
+.pi-auth{font-size:13px;font-weight:500;color:var(--subtle);margin-bottom:4px}
+.pi-j{font-size:13px;font-weight:500;color:var(--muted)}
+.pi-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.pi-year{font-size:12px;font-weight:600;color:var(--subtle);font-variant-numeric:tabular-nums}
+.pi-tier{display:inline-flex;background:var(--s2);border:1px solid var(--hairline);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.4px}
+
+/* ── Awards ── */
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.ac{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:20px 22px}
+.ac-yr{font-size:11px;font-weight:700;color:var(--subtle);letter-spacing:0.6px;text-transform:uppercase;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.ac-t{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:4px;line-height:1.35}
+.ac-o{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:6px}
+.ac-x{font-size:13px;font-weight:500;color:var(--subtle);line-height:1.55}
+
+/* ── Expeditions ── */
+.el{display:flex;flex-direction:column;gap:10px}
+.ei{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.ei-yr{font-size:12px;font-weight:700;color:#fff;background:var(--s2);border:1px solid var(--hairline);padding:4px 10px;border-radius:4px;white-space:nowrap;letter-spacing:0.4px;font-variant-numeric:tabular-nums}
+.ei-n{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:3px}
+.ei-v{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:2px}
+.ei-l{font-size:12px;font-weight:500;color:var(--subtle);margin-bottom:4px}
+.ei-r{font-size:13px;font-weight:500;color:var(--muted)}
+
+/* ── Collab ── */
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.cc{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:18px 20px}
+.cc-n{font-size:15px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin-bottom:5px}
+.cc-i{font-size:13px;font-weight:500;color:var(--muted);line-height:1.5;margin-bottom:6px}
+.cc-t{font-size:12px;font-weight:600;color:var(--subtle);letter-spacing:0.2px}
+
+/* ── Teaching ── */
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.tc{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:20px 22px}
+.tc-u{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:3px}
+.tc-c{font-size:12px;font-weight:600;color:var(--subtle);letter-spacing:0.4px;text-transform:uppercase;margin-bottom:12px}
+.tc-l{list-style:none;display:flex;flex-direction:column;gap:6px}
+.tc-l li{font-size:13px;font-weight:500;color:var(--muted);padding-left:12px;position:relative}
+.tc-l li::before{content:'';position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:1px;background:var(--s3)}
+
+/* ── Books ── */
+.bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.bk{background:var(--s1);border:1px solid var(--hairline);border-radius:12px;overflow:hidden}
+.bk-bar{height:2px;background:linear-gradient(90deg,#fff 0%,var(--s3) 100%)}
+.bk-b{padding:20px}
+.bk-ico{width:36px;height:36px;border-radius:6px;background:var(--s2);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.bk-ico svg{width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:1.5}
+.bk-t{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;line-height:1.4;margin-bottom:4px}
+.bk-te{font-size:12px;font-weight:500;color:var(--subtle);font-style:italic;margin-bottom:12px;line-height:1.5}
+.bk-f{border-top:1px solid var(--hairline-s);padding-top:10px;display:flex;justify-content:space-between;align-items:center}
+.bk-p{font-size:12px;font-weight:500;color:var(--subtle)}
+.bk-y{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* ── Services ── */
+.sl{display:flex;flex-direction:column;gap:10px}
+.si{background:var(--s1);border:1px solid var(--hairline);border-radius:10px;padding:18px 20px}
+.si-t{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px;margin-bottom:5px}
+.si-d{font-size:13px;font-weight:500;color:var(--muted);line-height:1.65}
+
+/* ── Contact / form ── */
+.cinfo{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.ci{display:flex;flex-direction:column;gap:2px}
+.ci-l{font-size:11px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:0.6px}
+.ci-v{font-size:14px;font-weight:500;color:var(--muted)}
+.ci-v a{color:var(--muted);transition:color .15s}
+.ci-v a:hover{color:#fff}
+.ff{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fl{font-size:13px;font-weight:600;color:var(--muted)}
+.fi,.fsel,.fta{
+  width:100%;background:var(--s1);border:1px solid var(--hairline);
+  border-radius:6px;padding:10px 14px;font-size:14px;font-weight:500;color:#fff;
+  font-family:inherit;transition:border-color .15s;-webkit-appearance:none;
+}
+.fsel{cursor:pointer}
+.fsel option{background:var(--s1);color:#fff}
+.fi:focus,.fsel:focus,.fta:focus{outline:none;border-color:#fff}
+.fi::placeholder,.fta::placeholder{color:var(--subtle)}
+.fta{resize:vertical;min-height:96px}
+.f-msg{display:none;margin-top:10px;font-size:13px;color:var(--muted);text-align:center}
+
+/* ── Divider ── */
+.section-rule{height:1px;background:var(--hairline-s);border:none;margin:0}
+
+/* ── Footer ── */
+footer{background:#000;border-top:1px solid var(--hairline-s);padding:40px 32px}
+.ft-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.ft-brand{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.2px}
+.ft-links{display:flex;gap:20px}
+.ft-links a{font-size:13px;font-weight:500;color:var(--subtle);transition:color .15s}
+.ft-links a:hover{color:#fff}
+.ft-copy{font-size:12px;font-weight:500;color:var(--subtle)}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .mob-btn{display:block}
+  .hero-grid,.g2,.ig,.ic.feat{grid-template-columns:1fr}
+  .hero-photo-ring{width:140px;height:140px}
+  .hero-name{font-size:42px}
+  .pi{grid-template-columns:1fr}
+  .pi-meta{align-items:flex-start;flex-direction:row}
+}
+@media(max-width:560px){
+  section{padding:72px 20px}
+  .wrap{padding:0 20px}
+  nav .nav-in{padding:0 20px}
+  footer{padding:32px 20px}
+  .ft-in{padding:0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="#" class="nav-brand">Noir P. Purba</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#innovations">Innovations</a>
+      <a href="#publications">Publications</a>
+      <a href="#expeditions">Expeditions</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#contact">Contact</a>
+      <a href="https://scholar.google.com/citations?user=iuIvqCsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="nav-cta">Scholar</a>
+    </div>
+    <button class="mob-btn" id="mobBtn" aria-label="Toggle menu">
+      <svg class="ic-menu" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="ic-close" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" class="mob-lnk">About</a>
+  <a href="#research" class="mob-lnk">Research</a>
+  <a href="#innovations" class="mob-lnk">Innovations</a>
+  <a href="#publications" class="mob-lnk">Publications</a>
+  <a href="#expeditions" class="mob-lnk">Expeditions</a>
+  <a href="#consulting" class="mob-lnk">Consulting</a>
+  <a href="#contact" class="mob-lnk">Contact</a>
+</div>
+
+<!-- Hero -->
+<section id="hero" class="bg-black">
+  <div class="hero-grid">
+    <div class="hero-photo-ring rv">
+      <img src="public/images/noir-purba.jpg" alt="Noir Primadona Purba" width="200" height="200">
+    </div>
+    <div>
+      <span class="hero-label rv">Associate Professor &middot; Physical Oceanography</span>
+      <h1 class="hero-name rv d1">Noir Primadona<br>Purba, PhD</h1>
+      <p class="hero-dept rv d1">Department of Marine Science &middot; Universitas Padjadjaran</p>
+      <blockquote class="hero-quote rv d2">
+        <p>&ldquo;A smooth sea never made a skilled sailor.&rdquo;</p>
+        <cite>&mdash; F.D. Roosevelt</cite>
+      </blockquote>
+      <div class="hero-stats rv d2">
+        <div class="stat"><div class="stat-v">2,597</div><div class="stat-l">Citations</div></div>
+        <div class="stat"><div class="stat-v">h-29</div><div class="stat-l">h-index</div></div>
+        <div class="stat"><div class="stat-v">i10: 71</div><div class="stat-l">i10-index</div></div>
+        <div class="stat"><div class="stat-v">16+</div><div class="stat-l">Years</div></div>
+      </div>
+      <div class="hero-ctas rv d3">
+        <a href="https://scholar.google.com/citations?user=iuIvqCsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-w">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Google Scholar
+        </a>
+        <a href="#contact" class="btn btn-d">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-rule"></div>
+</section>
+
+<hr class="section-rule">
+
+<!-- About -->
+<section id="about" class="bg-s1">
+  <div class="wrap">
+    <div class="g2">
+      <div class="rv">
+        <span class="eyebrow">About</span>
+        <h2 class="s-title">Physical Oceanographer &amp; Innovator</h2>
+        <p style="font-size:16px;font-weight:500;color:var(--muted);line-height:1.75;margin-top:16px;margin-bottom:16px">Associate Professor at Universitas Padjadjaran specializing in Physical Oceanography and Applied Ocean Sciences. Sixteen years of field, laboratory, and computational research spanning water mass dynamics, marine debris tracking, and low-cost ocean monitoring technology across the Indonesian Seas and Southeastern Indian Ocean.</p>
+        <p style="font-size:16px;font-weight:500;color:var(--muted);line-height:1.75;margin-bottom:28px">Founder of KomitmenX Research Group and Padjadjaran Oceanographic Data Centre (PODC), endorsed by UNESCO. Instruments deployed across Fiji, Germany, Malaysia, and the Philippines. Visiting Scientist at the Institute of Oceanology, Chinese Academy of Sciences (2026).</p>
+        <div style="display:flex;gap:40px;flex-wrap:wrap">
+          <div>
+            <div style="font-size:36px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1">71</div>
+            <div style="font-size:11px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:0.6px;margin-top:4px">Papers Published</div>
+          </div>
+          <div>
+            <div style="font-size:36px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1">4</div>
+            <div style="font-size:11px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:0.6px;margin-top:4px">Books Authored</div>
+          </div>
+          <div>
+            <div style="font-size:36px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1">11</div>
+            <div style="font-size:11px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:0.6px;margin-top:4px">Countries</div>
+          </div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <h3 style="font-size:14px;font-weight:700;color:#fff;letter-spacing:0.6px;text-transform:uppercase;margin-bottom:16px">Education</h3>
+        <div class="edu-list">
+          <div class="edu"><div class="edu-deg">Ph.D in Oceanography</div><div class="edu-inst">Institute of Oceanography and Environment (INOS), UMT &mdash; Malaysia</div><div class="edu-yr">2021 &ndash; 2025</div></div>
+          <div class="edu"><div class="edu-deg">Ocean Sciences Studies (PgOS)</div><div class="edu-inst">Alfred Wegener Institut (AWI), Bremerhaven &mdash; Germany</div><div class="edu-yr">2018 &ndash; 2019</div></div>
+          <div class="edu"><div class="edu-deg">M.Sc in Earth Science</div><div class="edu-inst">Bandung Institute of Technology (ITB) &mdash; Indonesia</div><div class="edu-yr">2005 &ndash; 2008</div></div>
+          <div class="edu"><div class="edu-deg">B.Sc in Oceanography</div><div class="edu-inst">University State of Riau &mdash; Indonesia</div><div class="edu-yr">2000 &ndash; 2005</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Research -->
+<section id="research" class="bg-black">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:48px"><span class="eyebrow">Research</span><h2 class="s-title">Research Focus Areas</h2><p class="s-sub" style="margin-top:10px">Four interconnected domains spanning field observation, instrument engineering, data science, and policy-relevant environmental science.</p></div>
+    <div class="rg">
+      <div class="rc rv d1"><div class="rc-num">01</div><div class="rc-t">Physical Oceanography</div><p class="rc-d">Water mass dynamics, ocean circulation, and current systems in the Indonesian Seas, Banda Sea, and Southeastern Indian Ocean &mdash; from in-situ CTD campaigns to multi-decadal historical analysis.</p></div>
+      <div class="rc rv d2"><div class="rc-num">02</div><div class="rc-t">Marine Debris &amp; Plastic Pathways</div><p class="rc-d">Mapping debris trajectories across Indonesian boundary seas using Lagrangian particle modeling, GPS drifter data, and field sampling. Informing national and ASEAN-level policy.</p></div>
+      <div class="rc rv d1"><div class="rc-num">03</div><div class="rc-t">Low-cost Ocean Technology</div><p class="rc-d">Engineering RHEA, ClimBoX, and NOaBox &mdash; affordable, multi-parameter ocean monitoring instruments designed for archipelagic and island nations with limited resources.</p></div>
+      <div class="rc rv d2"><div class="rc-num">04</div><div class="rc-t">Climate &amp; Ocean Data Science</div><p class="rc-d">Multi-decadal ocean heat content trends, sea level rise, and open data infrastructure. Founder of PODC &mdash; Indonesia's first UNESCO-endorsed ocean data portal.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Innovations -->
+<section id="innovations" class="bg-s1">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:48px"><span class="eyebrow">Innovations</span><h2 class="s-title">Ocean Technology Instruments</h2><p class="s-sub" style="margin-top:10px">Four hardware and data systems developed since 2016, deployed internationally and recognized at national and UNESCO levels.</p></div>
+    <div class="ig">
+      <div class="ic feat rv">
+        <div>
+          <div class="i-st">Active &middot; International</div>
+          <div class="i-name">RHEA / ARHEA</div>
+          <div class="i-full">Advanced Drifter GPS Oceanography Coverage Area</div>
+          <p class="i-desc">A 1-meter, 15 kg autonomous ocean drifter with GPS, satellite telemetry, and customizable sensor payloads &mdash; measuring temperature, salinity, pH, dissolved oxygen, turbidity, and current velocity. Transmits real-time data to PODC via satellite. Deployed across Indonesia, Philippines, Fiji, and Germany.</p>
+          <div class="tags"><span class="tag">GPS Drifter</span><span class="tag">Satellite IoT</span><span class="tag">Multi-sensor</span><span class="tag">Real-time Data</span></div>
+        </div>
+        <div>
+          <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--subtle);margin-bottom:14px">Recognition</h4>
+          <ul class="i-awards">
+            <li>Best Innovator Technology, Unpad Innovation Award (2024)</li>
+            <li>Top 115 National Innovations, BIC Indonesia (2023)</li>
+            <li>West Java Innovation Competition Winner (2022)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ic rv d1">
+        <div class="i-st">Active &middot; Ministry Funded</div>
+        <div class="i-name">ClimBoX V1.5</div>
+        <div class="i-full">Sustainable Marine Monitoring System Kit</div>
+        <p class="i-desc">An integrated multi-parameter sensor system for continuous climate change monitoring in coastal and marine protected areas. Supports SDG 13 and SDG 14. Funded by the Ministry of Higher Education, Research, and Technology.</p>
+        <div class="tags"><span class="tag">Climate Monitoring</span><span class="tag">MPA</span><span class="tag">SDGs 13 &amp; 14</span></div>
+      </div>
+      <div class="ic rv d2">
+        <div class="i-st">Live &middot; UNESCO Endorsed</div>
+        <div class="i-name">PODC</div>
+        <div class="i-full">Padjadjaran Oceanographic Data Centre</div>
+        <p class="i-desc">Indonesia's open ocean data portal, aggregating and visualizing real-time oceanographic data from RHEA/ARHEA deployments and partner networks. Endorsed by UNESCO under the UN Decade of Ocean Science 2021&ndash;2030.</p>
+        <div class="tags"><span class="tag">Open Data</span><span class="tag">UNESCO</span><span class="tag">FAIR Data</span></div>
+      </div>
+      <div class="ic rv d1">
+        <div class="i-st">Active &middot; Government Funded</div>
+        <div class="i-name">NOaBox</div>
+        <div class="i-full">Nusantara Oceanography Backdoor Experiment Box</div>
+        <p class="i-desc">A low-cost, automatic IoT-based marine monitoring instrument engineered for archipelagic deployment. The NOABOX-JB West Java variant was developed under the In-Jabar Government Grant (2024).</p>
+        <div class="tags"><span class="tag">IoT</span><span class="tag">Autonomous</span><span class="tag">Archipelago</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Publications -->
+<section id="publications" class="bg-black">
+  <div class="wrap">
+    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+      <div><span class="eyebrow">Publications</span><h2 class="s-title">Selected Publications</h2><p class="s-sub" style="margin-top:8px">71 peer-reviewed articles. Selected Q1 and Q2 journals shown.</p></div>
+      <a href="https://scholar.google.com/citations?user=iuIvqCsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn-sm">View All on Scholar</a>
+    </div>
+    <div class="pl">
+      <div class="pi rv"><div><div class="pi-title">Multi-decadal temperature changes and ocean heat content variability in the Southeastern Indian Ocean</div><div class="pi-auth">Purba, N. P., Akhir, M. F., Roseli, N., et al.</div><div class="pi-j">All Earth</div></div><div class="pi-meta"><span class="pi-tier">Q1</span><span class="pi-year">2026</span></div></div>
+      <div class="pi rv"><div><div class="pi-title">Two Centuries of Oceanographic Data in the Indonesian Seas and Surroundings: Historical Trends, Gaps, and Future Challenges</div><div class="pi-auth">Purba, N. P., Faid, G. M., Zheng, W., Akhir, M. F., et al.</div><div class="pi-j">Earth System Science Data</div></div><div class="pi-meta"><span class="pi-tier">Q1</span><span class="pi-year">2025</span></div></div>
+      <div class="pi rv"><div><div class="pi-title">Water mass stability and mixing in the Banda Sea derived from Global Data Repository and the Jalacitra II Expedition</div><div class="pi-auth">Purba, N. P., Aryanto, N. C., Febriawan, H. K., et al.</div><div class="pi-j">Oceanologia</div></div><div class="pi-meta"><span class="pi-tier">Q1</span><span class="pi-year">2025</span></div></div>
+      <div class="pi rv"><div><div class="pi-title">Mapping the sources and strands of marine debris via particle modelling and in-situ sampling approaches in archipelagic countries</div><div class="pi-auth">Purba, N. P., Faizal, I., Christie, D., et al.</div><div class="pi-j">Scientific Reports (Nature Portfolio)</div></div><div class="pi-meta"><span class="pi-tier">Q1</span><span class="pi-year">2024</span></div></div>
+      <div class="pi rv"><div><div class="pi-title">Interactions between marine megafauna and plastic pollution in Southeast Asia</div><div class="pi-auth">Omeyer, L. C. M., Duncan, E. M., ..., Purba, N. P., ..., Godley, B. J.</div><div class="pi-j">Science of the Total Environment</div></div><div class="pi-meta"><span class="pi-tier">Q1</span><span class="pi-year">2023</span></div></div>
+      <div class="pi rv"><div><div class="pi-title">Marine debris pathway across Indonesian boundary seas</div><div class="pi-auth">Purba, N. P., Faizal, I., Cordova, M. R., et al.</div><div class="pi-j">Journal of Ecological Engineering</div></div><div class="pi-meta"><span class="pi-tier">Q2</span><span class="pi-year">2021</span></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Awards -->
+<section id="awards" class="bg-s1">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Recognition</span><h2 class="s-title">Awards &amp; Honors</h2><p class="s-sub" style="margin-top:10px">National and international recognition for research, innovation, and science communication.</p></div>
+    <div class="ag">
+      <div class="ac rv"><div class="ac-yr">2025</div><div class="ac-t">EQUITY-WCU Program Awardee</div><div class="ac-o">Universitas Padjadjaran / LPDP</div><div class="ac-x">Strategic LPDP-funded program to enhance global research visibility and international collaboration.</div></div>
+      <div class="ac rv d1"><div class="ac-yr">2024</div><div class="ac-t">Best Innovator &mdash; Technology Category</div><div class="ac-o">Universitas Padjadjaran Innovation Award</div><div class="ac-x">Awarded for the RHEA ARHEA ocean monitoring system.</div></div>
+      <div class="ac rv d2"><div class="ac-yr">2024</div><div class="ac-t">Top 116 National Innovations Indonesia</div><div class="ac-o">Business Innovation Center (BIC)</div><div class="ac-x">ClimBoX climate ocean monitoring system.</div></div>
+      <div class="ac rv"><div class="ac-yr">2023</div><div class="ac-t">First Prize &mdash; National Scientific Writing Competition</div><div class="ac-o">Lecturer Category, National</div><div class="ac-x">Excellence in scientific writing on higher education challenges in the post-pandemic era.</div></div>
+      <div class="ac rv d1"><div class="ac-yr">2022</div><div class="ac-t">Winner &mdash; West Java Innovation Competition</div><div class="ac-o">Government of West Java</div><div class="ac-x">Marine technology innovation ARHEA and RHEA.</div></div>
+      <div class="ac rv d2"><div class="ac-yr">2021</div><div class="ac-t">UNESCO Decade of Ocean Science Endorsement</div><div class="ac-o">UNESCO (2021&ndash;2030)</div><div class="ac-x">PODC endorsed under the UN Decade of Ocean Science.</div></div>
+      <div class="ac rv"><div class="ac-yr">2021</div><div class="ac-t">Best Writer &mdash; Environment Category</div><div class="ac-o">The Conversation Indonesia</div><div class="ac-x">Contributions on environmental and marine issues, climate change, and marine challenges in Indonesia.</div></div>
+      <div class="ac rv d1"><div class="ac-yr">2016&ndash;2020</div><div class="ac-t">Best Lecturer &mdash; Faculty of Fisheries and Marine Science</div><div class="ac-o">Universitas Padjadjaran</div><div class="ac-x">Awarded in 2016, 2017, 2019, and 2020.</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Expeditions -->
+<section id="expeditions" class="bg-black">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Field Work</span><h2 class="s-title">Scientific Expeditions</h2><p class="s-sub" style="margin-top:10px">Six major research cruises spanning the Indonesian Seas, North Atlantic, and the Indo-Pacific.</p></div>
+    <div class="el">
+      <div class="ei rv"><div class="ei-yr">2023</div><div><div class="ei-n">Jalacitra III &mdash; Flores Expedition</div><div class="ei-v">KRI Rigel &middot; Indonesian Navy / Pushidrosal</div><div class="ei-l">Banda Sea, Indonesia</div><div class="ei-r">Onshore Scientist &mdash; oceanographic analysis and marine debris</div></div></div>
+      <div class="ei rv"><div class="ei-yr">2022</div><div><div class="ei-n">Jalacitra II &mdash; Banda Expedition</div><div class="ei-v">KRI Rigel &middot; Indonesian Navy / Pushidrosal</div><div class="ei-l">Banda Sea, Indonesia</div><div class="ei-r">Onshore Scientist &mdash; magnetic data acquisition and processing</div></div></div>
+      <div class="ei rv"><div class="ei-yr">2018</div><div><div class="ei-n">German Bight Survey</div><div class="ei-v">R/V Heincke</div><div class="ei-l">North Atlantic, Germany</div><div class="ei-r">Researcher &mdash; CTD-Rosette, sediment sampling, nutrients, microplastics</div></div></div>
+      <div class="ei rv"><div class="ei-yr">2015</div><div><div class="ei-n">JUVO Project</div><div class="ei-v">R/V Baruna Jaya 8</div><div class="ei-l">South Java, Indonesia</div><div class="ei-r">Onshore Scientist &mdash; pH, temperature, salinity</div></div></div>
+      <div class="ei rv"><div class="ei-yr">2010</div><div><div class="ei-n">INDOMIX Cruise &mdash; Indonesian Throughflow Research</div><div class="ei-v">R/V Marion Dufresne &middot; France &ndash; Indonesia</div><div class="ei-l">Pacific &middot; Indonesia &middot; Indian Ocean</div><div class="ei-r">Researcher &mdash; LADCP deployment, continuous CTD-Rosette, multi-oceanographic measurements</div></div></div>
+      <div class="ei rv"><div class="ei-yr">2009</div><div><div class="ei-n">Multi-Oceanographic Survey</div><div class="ei-v">R/V Baruna Jaya 8</div><div class="ei-l">Java Sea &middot; Karimata Strait &middot; Bangka Belitung</div><div class="ei-r">Observer and Data Processing</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Global -->
+<section id="global" class="bg-s1">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Global Reach</span><h2 class="s-title">International Collaborations</h2><p class="s-sub" style="margin-top:10px">Active research partnerships across 11 countries spanning Europe, Asia, Oceania, and Southeast Asia.</p></div>
+    <div class="cg">
+      <div class="cc rv"><div class="cc-n">Germany</div><div class="cc-i">Alfred Wegener Institut (AWI)</div><div class="cc-t">Research &amp; Fellowship</div></div>
+      <div class="cc rv d1"><div class="cc-n">Malaysia</div><div class="cc-i">Universiti Malaysia Terengganu (UMT) &middot; University Malaysia Sabah (UMS)</div><div class="cc-t">PhD &amp; Teaching</div></div>
+      <div class="cc rv d2"><div class="cc-n">China</div><div class="cc-i">Institute of Oceanology, Chinese Academy of Sciences (IOCAS)</div><div class="cc-t">Visiting Scientist 2026</div></div>
+      <div class="cc rv"><div class="cc-n">United Kingdom</div><div class="cc-i">Plymouth Marine Laboratory &middot; Bangor University &middot; University of Edinburgh</div><div class="cc-t">Research Collaboration</div></div>
+      <div class="cc rv d1"><div class="cc-n">Philippines</div><div class="cc-i">Marine Science Institute, University of the Philippines Diliman</div><div class="cc-t">ARHEA Joint Project</div></div>
+      <div class="cc rv d2"><div class="cc-n">France</div><div class="cc-i">IPEV &middot; LEGOS &middot; LOCEAN &middot; IRD</div><div class="cc-t">INDOMIX Expedition</div></div>
+      <div class="cc rv"><div class="cc-n">Norway</div><div class="cc-i">Norwegian Institute for Water Research (NIVA)</div><div class="cc-t">Marine Debris Research</div></div>
+      <div class="cc rv d1"><div class="cc-n">Fiji</div><div class="cc-i">South Pacific Community (AIS Forum)</div><div class="cc-t">ARHEA Deployment</div></div>
+      <div class="cc rv d2"><div class="cc-n">Portugal</div><div class="cc-i">NF-POGO Partner Network</div><div class="cc-t">Ocean Observation</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Teaching -->
+<section id="teaching" class="bg-black">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Teaching</span><h2 class="s-title">Academic Teaching</h2><p class="s-sub" style="margin-top:10px">Seven universities across Indonesia and Malaysia. Head of Doctoral Study Programme, Sustainable Fisheries and Oceans at Universitas Padjadjaran.</p></div>
+    <div class="tg">
+      <div class="tc rv"><div class="tc-u">Universitas Padjadjaran</div><div class="tc-c">Indonesia</div><ul class="tc-l"><li>Physical Oceanography</li><li>Fisheries Oceanography</li><li>Climate and Meteorology</li></ul></div>
+      <div class="tc rv d1"><div class="tc-u">Universitas Indonesia</div><div class="tc-c">Indonesia</div><ul class="tc-l"><li>Oceanography Data and Technology</li></ul></div>
+      <div class="tc rv d2"><div class="tc-u">Bandung Institute of Technology (ITB)</div><div class="tc-c">Indonesia</div><ul class="tc-l"><li>Ecosystem Connectivity</li></ul></div>
+      <div class="tc rv"><div class="tc-u">Institut Teknologi Sumatera (ITERA)</div><div class="tc-c">Indonesia</div><ul class="tc-l"><li>Meteorology and Climate Change</li></ul></div>
+      <div class="tc rv d1"><div class="tc-u">Telkom University</div><div class="tc-c">Indonesia</div><ul class="tc-l"><li>Low-cost Ocean Technology</li></ul></div>
+      <div class="tc rv d2"><div class="tc-u">University Malaysia Sabah (UMS)</div><div class="tc-c">Malaysia</div><ul class="tc-l"><li>Marine Debris</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Books -->
+<section id="books" class="bg-s1">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Books</span><h2 class="s-title">Books &amp; Monographs</h2><p class="s-sub" style="margin-top:10px">Four volumes published by Unpad Press, covering oceanographic dynamics, marine technology, and island ecosystems.</p></div>
+    <div class="bg">
+      <div class="bk rv"><div class="bk-bar"></div><div class="bk-b"><div class="bk-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="bk-t">Oseanografi Indonesia: Dinamika Taikan Air</div><div class="bk-te">Indonesian Oceanography: Water Column Dynamics</div><div class="bk-f"><span class="bk-p">Unpad Press &middot; 150 pp.</span><span class="bk-y">2020</span></div></div></div>
+      <div class="bk rv d1"><div class="bk-bar"></div><div class="bk-b"><div class="bk-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="bk-t">Rakit Island, Oase in Java Seas</div><div class="bk-te">Rakit Island, Oasis in the Java Sea</div><div class="bk-f"><span class="bk-p">Unpad Press &middot; 149 pp.</span><span class="bk-y">2017</span></div></div></div>
+      <div class="bk rv d2"><div class="bk-bar"></div><div class="bk-b"><div class="bk-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="bk-t">Dinamika Oseanografi: Karakteristik dan Sirkulasi Massa Air</div><div class="bk-te">Dynamic Oceanography: Water Mass Characteristics and Circulation</div><div class="bk-f"><span class="bk-p">Unpad Press &middot; 272 pp.</span><span class="bk-y">2015</span></div></div></div>
+      <div class="bk rv d1"><div class="bk-bar"></div><div class="bk-b"><div class="bk-ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="bk-t">Isle in Indonesia: Biawak, Gosong, and Cendekian</div><div class="bk-te">Isles in Indonesia: Biawak, Gosong, and Cendekian</div><div class="bk-f"><span class="bk-p">Unpad Press &middot; 42 pp.</span><span class="bk-y">2013</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Consulting -->
+<section id="consulting" class="bg-black">
+  <div class="wrap">
+    <div class="g2">
+      <div class="rv">
+        <span class="eyebrow">Consulting</span>
+        <h2 class="s-title">Expert Consulting Services</h2>
+        <p style="font-size:16px;font-weight:500;color:var(--muted);line-height:1.75;margin-top:16px;margin-bottom:28px">Available for consulting engagements in ocean science, marine technology, and environmental policy. Sixteen years of applied research experience across Indonesia, Southeast Asia, and international collaborations.</p>
+        <a href="mailto:noir.purba@unpad.ac.id?subject=Consulting Inquiry" class="btn btn-w">Request a Consultation</a>
+      </div>
+      <div class="sl">
+        <div class="si rv d1"><div class="si-t">Ocean Monitoring System Design</div><div class="si-d">Instrument selection, deployment planning, and data pipeline architecture for marine monitoring programs in archipelagic and coastal environments.</div></div>
+        <div class="si rv d2"><div class="si-t">Marine Debris &amp; Plastic Policy</div><div class="si-d">Source identification, drift trajectory modeling, and evidence-based policy recommendations for national and ASEAN-level marine litter management.</div></div>
+        <div class="si rv d1"><div class="si-t">Oceanographic Data Analysis</div><div class="si-d">Water mass characterization, multi-decadal trend analysis, and ocean heat content assessment from CTD, Argo float, and satellite datasets.</div></div>
+        <div class="si rv d2"><div class="si-t">Research Program Development</div><div class="si-d">Grant proposal support, research design, and institutional capacity building for ocean science programs in developing nations.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Student Services -->
+<section id="services" class="bg-s1">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:40px"><span class="eyebrow">Student Services</span><h2 class="s-title">Academic Submission Requests</h2><p class="s-sub" style="margin-top:10px">Submit requests for thesis supervision, research title proposals, or internship applications. Responses are typically sent within 1 to 3 business days.</p></div>
+    <div class="g2">
+      <form class="rv" id="subForm">
+        <div class="ff"><label class="fl" for="rtype">Request Type</label><select class="fsel" id="rtype" name="type" required><option value="">Select a request type</option><option value="bimbingan">Thesis Supervision</option><option value="judul">Title Proposal</option><option value="magang">Internship Application</option></select></div>
+        <div class="ff"><label class="fl" for="rname">Full Name</label><input class="fi" type="text" id="rname" name="name" placeholder="Your full name" required></div>
+        <div class="ff"><label class="fl" for="rnim">Student ID (NIM)</label><input class="fi" type="text" id="rnim" name="nim" placeholder="Your student ID number" required></div>
+        <div class="ff"><label class="fl" for="remail">Email Address</label><input class="fi" type="email" id="remail" name="email" placeholder="your@email.com" required></div>
+        <div class="ff"><label class="fl" for="rprog">Study Program</label><input class="fi" type="text" id="rprog" name="program" placeholder="e.g. Marine Science, S1" required></div>
+        <div class="ff"><label class="fl" for="rsubj">Subject</label><input class="fi" type="text" id="rsubj" name="subject" placeholder="Brief subject of your request" required></div>
+        <div class="ff"><label class="fl" for="rnotes">Additional Notes</label><textarea class="fta" id="rnotes" name="notes" placeholder="Provide any additional context..." rows="4"></textarea></div>
+        <button type="submit" class="btn btn-w" style="width:100%;justify-content:center">Submit Request</button>
+        <div class="f-msg" id="sub-msg"></div>
+      </form>
+      <div class="rv d1">
+        <h3 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--subtle);margin-bottom:16px">What to Expect</h3>
+        <div class="sl">
+          <div class="si"><div class="si-t">Thesis Supervision</div><div class="si-d">Submit your topic proposal and initial research questions. Slots are limited and reviewed on a rolling basis each semester.</div></div>
+          <div class="si"><div class="si-t">Title Proposal</div><div class="si-d">Share your proposed thesis or research title for preliminary review before formal submission to the department.</div></div>
+          <div class="si"><div class="si-t">Internship Application</div><div class="si-d">Apply to join KomitmenX Research Group or PODC for supervised fieldwork, data analysis, or instrument development projects.</div></div>
+        </div>
+        <div style="margin-top:20px;padding:16px 18px;background:var(--s2);border:1px solid var(--hairline);border-radius:8px">
+          <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.6px;color:var(--subtle);margin-bottom:6px">Direct Contact</div>
+          <a href="mailto:noir.purba@unpad.ac.id" style="font-size:14px;font-weight:500;color:var(--muted)">noir.purba@unpad.ac.id</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- Contact -->
+<section id="contact" class="bg-black">
+  <div class="wrap">
+    <div class="g2">
+      <div class="rv">
+        <span class="eyebrow">Contact</span>
+        <h2 class="s-title">Get in Touch</h2>
+        <p style="font-size:16px;font-weight:500;color:var(--muted);line-height:1.75;margin-top:16px">Open to research collaborations, media inquiries, speaking invitations, and consulting engagements in ocean science and marine technology.</p>
+        <div class="cinfo">
+          <div class="ci"><span class="ci-l">Email</span><span class="ci-v"><a href="mailto:noir.purba@unpad.ac.id">noir.purba@unpad.ac.id</a></span></div>
+          <div class="ci"><span class="ci-l">Institution</span><span class="ci-v"><a href="http://fpik.unpad.ac.id/noir-p-purba/" target="_blank" rel="noopener noreferrer">Universitas Padjadjaran, Faculty of Fisheries and Marine Science</a></span></div>
+          <div class="ci"><span class="ci-l">Location</span><span class="ci-v" style="color:var(--subtle)">Bandung, West Java, Indonesia</span></div>
+          <div class="ci"><span class="ci-l">Google Scholar</span><span class="ci-v"><a href="https://scholar.google.com/citations?user=iuIvqCsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">scholar.google.com</a></span></div>
+          <div class="ci"><span class="ci-l">ResearchGate</span><span class="ci-v"><a href="https://www.researchgate.net/profile/Noir-Primadona-Purba" target="_blank" rel="noopener noreferrer">researchgate.net</a></span></div>
+          <div class="ci"><span class="ci-l">The Conversation</span><span class="ci-v"><a href="https://theconversation.com/profiles/noir-primadona-purba-441431" target="_blank" rel="noopener noreferrer">theconversation.com</a></span></div>
+          <div class="ci"><span class="ci-l">PODC Data Portal</span><span class="ci-v"><a href="http://www.isea-pdoc.org" target="_blank" rel="noopener noreferrer">isea-pdoc.org</a></span></div>
+        </div>
+      </div>
+      <form class="rv d1" id="ctForm">
+        <div class="ff"><label class="fl" for="cname">Name</label><input class="fi" type="text" id="cname" name="name" placeholder="Your name" required></div>
+        <div class="ff"><label class="fl" for="cemail">Email</label><input class="fi" type="email" id="cemail" name="email" placeholder="your@email.com" required></div>
+        <div class="ff"><label class="fl" for="csubj">Subject</label><input class="fi" type="text" id="csubj" name="subject" placeholder="What is this regarding?" required></div>
+        <div class="ff"><label class="fl" for="cmsg">Message</label><textarea class="fta" id="cmsg" name="message" placeholder="Your message..." rows="5" required></textarea></div>
+        <button type="submit" class="btn btn-w" style="width:100%;justify-content:center">Send Message</button>
+        <div class="f-msg" id="ct-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-in">
+    <div>
+      <div class="ft-brand">Noir P. Purba</div>
+      <div style="font-size:12px;font-weight:500;color:var(--subtle);margin-top:3px">Department of Marine Science &middot; Universitas Padjadjaran</div>
+    </div>
+    <div class="ft-links">
+      <a href="https://scholar.google.com/citations?user=iuIvqCsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://www.researchgate.net/profile/Noir-Primadona-Purba" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+      <a href="https://theconversation.com/profiles/noir-primadona-purba-441431" target="_blank" rel="noopener noreferrer">The Conversation</a>
+      <a href="http://www.isea-pdoc.org" target="_blank" rel="noopener noreferrer">PODC</a>
+    </div>
+    <div class="ft-copy">&copy; 2026 Noir Primadona Purba</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    /* Scroll reveal */
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+    /* Hero reveals on load */
+    setTimeout(function () {
+        document.querySelectorAll('#hero .rv').forEach(function (el) { el.classList.add('on'); });
+    }, 60);
+
+    /* Active nav */
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    var navIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) {
+                var id = '#' + e.target.id;
+                navLinks.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === id); });
+            }
+        });
+    }, { threshold: 0.4 });
+    sections.forEach(function (s) { navIO.observe(s); });
+
+    /* Mobile menu */
+    var mobBtn = document.getElementById('mobBtn');
+    var mobMenu = document.getElementById('mobMenu');
+    mobBtn.addEventListener('click', function () {
+        var open = mobMenu.classList.toggle('open');
+        mobBtn.classList.toggle('open', open);
+    });
+    document.querySelectorAll('.mob-lnk').forEach(function (l) {
+        l.addEventListener('click', function () {
+            mobMenu.classList.remove('open');
+            mobBtn.classList.remove('open');
+        });
+    });
+
+    /* Contact form */
+    document.getElementById('ctForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('cname').value;
+        var email = document.getElementById('cemail').value;
+        var subject = document.getElementById('csubj').value;
+        var message = document.getElementById('cmsg').value;
+        var body = 'From: ' + name + ' (' + email + ')\n\n' + message;
+        window.location.href = 'mailto:noir.purba@unpad.ac.id?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        var msg = document.getElementById('ct-msg');
+        msg.style.display = 'block';
+        msg.textContent = 'Opening your email client...';
+    });
+
+    /* Submission form */
+    document.getElementById('subForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var typeMap = { bimbingan: 'Thesis Supervision', judul: 'Title Proposal', magang: 'Internship Application' };
+        var typeVal = document.getElementById('rtype').value;
+        var typeLabel = typeMap[typeVal] || typeVal;
+        var name = document.getElementById('rname').value;
+        var nim = document.getElementById('rnim').value;
+        var email = document.getElementById('remail').value;
+        var program = document.getElementById('rprog').value;
+        var subject = document.getElementById('rsubj').value;
+        var notes = document.getElementById('rnotes').value;
+        var body = [
+            'Request Type: ' + typeLabel,
+            'Name: ' + name,
+            'Student ID: ' + nim,
+            'Email: ' + email,
+            'Study Program: ' + program,
+            'Subject: ' + subject,
+            notes ? 'Notes: ' + notes : ''
+        ].filter(Boolean).join('\n');
+        window.location.href = 'mailto:noir.purba@unpad.ac.id?subject=' + encodeURIComponent('[' + typeLabel + '] ' + subject) + '&body=' + encodeURIComponent(body);
+        var msg = document.getElementById('sub-msg');
+        msg.style.display = 'block';
+        msg.textContent = 'Opening your email client to send the request...';
+    });
+}());
+</script>
+</body>
+</html>
