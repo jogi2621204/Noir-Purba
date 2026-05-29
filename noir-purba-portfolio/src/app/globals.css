@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --blue: #0066cc;
+    --blue-sky: #2997ff;
+    --blue-focus: #0071e3;
+    --surface-black: #000000;
+    --surface-tile: #272729;
+    --ink: #ffffff;
+    --ink-muted: #cccccc;
+    --ink-subtle: #7a7a7a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "SF Pro Text",
+      "Inter",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "SF Pro Display",
+      "Inter",
+      sans-serif;
+    letter-spacing: -0.028em;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background-color: rgba(0, 102, 204, 0.35);
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3a3a3c;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0066cc;
+  }
+}
+
+@layer components {
+  .glass-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold text-white tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-[#cccccc] text-base md:text-lg max-w-2xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full font-normal transition-all duration-200;
+    padding: 11px 22px;
+    background-color: #0066cc;
+    color: #ffffff;
+    font-size: 17px;
+  }
+
+  .btn-primary:hover {
+    background-color: #0071e3;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full font-normal transition-all duration-200;
+    padding: 11px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #2997ff;
+    font-size: 17px;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(41, 151, 255, 0.6);
+    color: #ffffff;
+  }
+
+  .input-ocean {
+    @apply w-full rounded-[11px] px-4 py-3 text-white transition-colors duration-200;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 17px;
+  }
+
+  .input-ocean::placeholder {
+    color: #7a7a7a;
+  }
+
+  .input-ocean:focus {
+    outline: none;
+    border-color: rgba(0, 102, 204, 0.6);
+    box-shadow: 0 0 0 1px rgba(0, 102, 204, 0.3);
+  }
+
+  .textarea-ocean {
+    @apply input-ocean resize-none;
+  }
+
+  .label-ocean {
+    @apply block text-sm font-medium mb-1.5;
+    color: #cccccc;
+  }
+}
+
+@layer utilities {
+  .animate-particle {
+    animation: particle-float linear infinite;
+  }
+
+  .text-gradient-teal {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, #2997ff 0%, #86c4f8 100%);
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0;
+  }
+}
